@@ -118,6 +118,7 @@ function ShowDetails() {
     let { detailsId } = useParams();
     const chapters = ['chapter1', 'chapter2', 'chapter3', 'chapter1', 'chapter2', 'chapter3', 'chapter1', 'chapter2', 'chapter3', 'chapter1', 'chapter2', 'chapter3', 'chapter1', 'chapter2', 'chapter3', 'chapter1', 'chapter2', 'chapter3', 'chapter1', 'chapter2', 'chapter3', 'chapter1', 'chapter2', 'chapter3', 'chapter1', 'chapter2', 'chapter3', 'chapter1', 'chapter2', 'chapter3',]
     const [currentData, setCurrentData] = useState({})
+    const [fullSummary, setFullSummary] = useState(false);
     useEffect(() => {
         setCurrentData(data[detailsId]);
     }, [])
@@ -184,7 +185,33 @@ function ShowDetails() {
                         </div>
                     </div>
                 </div>
-                <div className='my-8'>
+                {/* summery */}
+
+                <div className='my-8 px-8'>
+                    <div className=''>
+                        <div className='m-2 mt-0   flex  border-b-[1px] border-slate-100 items-center'>
+                            <div className='flex items-center '>
+                                <div className='w-8 h-8 bg-gradient-to-r from-[#17A30B] to-[#1A6B13] z-[1] text-white ' ><StarIcon /></div>
+                                <div className='w-4 h-4 bg-[#1A6B13] relative left-[-0.8rem] rotate-45 '></div>
+                            </div>
+                            <h3 className='text-slate-100 font-medium text-2xl mr-8'>  SUMMARY
+                            </h3>
+
+                        </div>
+                        <div className='transition-all duration-700'>
+                            <div className={fullSummary?'px-4 text-2xl text-gray-500 max-h-auto overflow-hidden' :'px-4 text-2xl text-gray-500 max-h-28 overflow-hidden'}>
+                                As the grandmaster who founded the Demonic Sect, Wei WuXian roamed the world in his wanton ways, hated by millions for the chaos he created. In the end, he was back-stabbed by his dearest junior brother and killed by powerful clans that combined to overpower him. He incarnates into the body of a lunatic who was abandoned by his clan and is later, unwillingly, taken away by a famous cultivator among the clans—Lan WangJi, his archenemy.
+
+                                This marks the start of a thrilling yet hilarious journey of attacking monsters, solving mysteries, and
+                            </div>
+                            <div className='flex justify-center'>
+                                <button onClick={()=>setFullSummary(!fullSummary)} className='text-white hover:text-red-500 text-center  flex  py-2 px-1 my-2 '>{fullSummary ? "Show Less" : "Show More"}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* latest releases part */}
+                <div className='my-8 px-8'>
                     <div className=''>
                         <div className='m-2 mt-0   flex  border-b-[1px] border-slate-100 items-center'>
                             <div className='flex items-center '>
@@ -197,12 +224,12 @@ function ShowDetails() {
                         </div>
                     </div>
                 </div>
-                <div className='px-4'>
+                <div className='px-10'>
                     {
                         chapters.map((cpter, index) => {
                             return (
                                 <div key={index}>
-                                    <div className='text-2xl py-4'>
+                                    <div className='text-2xl py-4 '>
                                         Chapter {index + 1}
                                     </div>
                                     <hr className=' border-gray-500' />

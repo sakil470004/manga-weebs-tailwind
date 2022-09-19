@@ -1,6 +1,4 @@
-import { data } from 'autoprefixer'
 import React from 'react'
-import pic from './../assets/demo2.jpg'
 
 function SidePicCard({ data, index }) {
     return (

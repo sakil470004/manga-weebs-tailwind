@@ -63,21 +63,8 @@ function TendingList() {
             "name": "I Return from the Heaven and Worlds",
             "rating": "3.3"
         },
-        {
-            "img": "https://mangalogy.com/wp-content/uploads/2022/08/Xiao-BaiS-Father-Is-A-Wonderful-Person-110x150.jpg",
-            "name": "Forced to Become the Villain’s Son-in-law",
-            "rating": "3.5"
-        },
-        {
-            "img": "https://mangalogy.com/wp-content/uploads/2022/08/Son-in-Law-Does-Cheap-Cultivation-193x278-1-110x150.jpeg",
-            "name": "100,000 Levels of Body Refining : All the dogs I raise are the Emperor",
-            "rating": "3.3"
-        },
-        {
-            "img": "https://mangalogy.com/wp-content/uploads/2022/08/National-School-Prince-Is-A-Girl-110x150.jpg",
-            "name": "The Tutorial Tower of the Advanced Player",
-            "rating": "4.3"
-        }
+      
+     
     ]
 
 

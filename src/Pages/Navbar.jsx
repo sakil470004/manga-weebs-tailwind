@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className='w-full h-[80px] z-30  bg-gradient-to-r from-[#17A30B] to-[#1A6B13]  drop-shadow-lg text-zinc-200'>
       <div className='px-2 flex justify-between items-center w-full h-full'>
         <div className='flex items-center'>
-          <div className='w-[232px] mr-8 '><img src={logo} alt='logo' onClick={() => navigate('/')} /></div>
+          <div className='w-[232px] mr-8 cursor-pointer'><img src={logo} alt='logo' onClick={() => navigate('/')} /></div>
           <ul className='hidden md:flex md:gap-8 font-bold'>
             <li><Link to="home" smooth={true} duration={500} onClick={() => navigate('/')}>Home</Link></li>
             <li><Link to="about" smooth={true} offset={-200} duration={500}>Latest Manga</Link></li>
